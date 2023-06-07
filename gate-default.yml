@@ -44,4 +44,4 @@ management:
     web:
       exposure:
         include: refresh,health,beans,httptrace
-      base-path: /management
+      base-path: /gate/management
