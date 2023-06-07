@@ -40,4 +40,4 @@ management:
       base-path: /first-service/management
 
 
-secret: user-service-default
+secret: user-service-default1
