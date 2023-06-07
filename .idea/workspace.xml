@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e53ffe15-aa48-4744-9024-2df7d8f03f67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gateway-default.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../spring-config-yml/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../spring-config/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../spring-config/.idea/modules.xml" afterDir="false" />
@@ -63,7 +62,7 @@
       <change beforePath="$PROJECT_DIR$/../CoDEV_BackEnd/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoDEV_BackEnd/src/main/resources/com/codevumc/codev_backend/mapper/CoUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CoDEV_BackEnd/src/main/resources/com/codevumc/codev_backend/mapper/CoUserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CoDEV_BackEnd/src/test/java/com/codevumc/codev_backend/CoDevBackEndApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoDEV_BackEnd/src/test/java/com/codevumc/codev_backend/CoDevBackEndApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-default.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-default.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686115372713</updated>
       <workItem from="1686115375180" duration="6258000" />
-      <workItem from="1686134510604" duration="3903000" />
+      <workItem from="1686134510604" duration="4238000" />
     </task>
     <servers />
   </component>
