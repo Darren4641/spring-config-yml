@@ -1,0 +1,47 @@
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: first-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/first-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/first-service/(?<segment>.*), /$\{segment}
+        - id: second-service
+          uri: lb://POST-SERVICE
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/second-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
+        - id: first-serviceac
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/first-serviceac/actuator/**
+            - Method=GET,POST
+            filters:
+              - RemoveRequestHeader=Cookie
+              - RewritePath=/first-serviceac/(?<segment>.*), /$\{segment}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,beans,httptrace
+      base-path: /management
