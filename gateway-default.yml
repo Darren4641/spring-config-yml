@@ -32,9 +32,3 @@ spring:
             - AuthorizationHeaderFilter
 
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh,health,beans,httptrace
-      base-path: /gateway/management
