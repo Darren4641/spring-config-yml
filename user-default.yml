@@ -37,7 +37,7 @@ management:
     web:
       exposure:
         include: refresh,health,beans,httptrace
-
+      base-path: /first-service/management
 
 
 secret: user-service-default
