@@ -16,6 +16,9 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
         - id: first-service
           uri: lb://USER-SERVICE
