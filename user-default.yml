@@ -42,6 +42,6 @@ management:
 
 secret: user-service-default2
 
-post:
-  url-prefix: http://127.0.0.1:9001/second-service
-  get-posts-path: /%s/posts
+#post:
+#  url-prefix: http://127.0.0.1:9001/second-service
+#  get-posts-path: /%s/posts
