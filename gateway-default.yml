@@ -16,14 +16,6 @@ spring:
             - RemoveRequestHeader=Cookie
             #- RewritePath=/first-service/(?<segment>.*), /$\{segment}
         - id: second-service
-          uri: lb://POST-SERVICE
-          predicates:
-            - Path=/second-service/**
-          filters:
-            - RemoveRequestHeader=Cookie
-            #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
-            - AuthorizationHeaderFilter
-        - id: second-service
             uri: lb://POST-SERVICE
             predicates:
               - Path=/second-service/management/**
@@ -31,6 +23,15 @@ spring:
             filters:
               - RemoveRequestHeader=Cookie
               #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
+        - id: second-service
+          uri: lb://POST-SERVICE
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
+
 
 
 management:
