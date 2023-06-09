@@ -19,10 +19,17 @@ spring:
           uri: lb://POST-SERVICE
           predicates:
             - Path=/second-service/**
+            - name: user-second-service
+            - Path=/second-service/management/**
+            - name: management-second-service
           filters:
-            - RemoveRequestHeader=Cookie
-            #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
-            - AuthorizationHeaderFilter
+            - name: user-filter-for-user-second-service
+              - RemoveRequestHeader=Cookie
+              - AuthorizationHeaderFilter
+            - name: management-filter-for-management-second-service
+              - - RemoveRequestHeader=Cookie
+
+
 
 eureka:
   client:
