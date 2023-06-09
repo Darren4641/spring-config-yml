@@ -23,7 +23,7 @@ spring:
             - RemoveRequestHeader=Cookie
             #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
             - AuthorizationHeaderFilter
-        - id: second-service
+        - id: second-service-management
             uri: lb://POST-SERVICE
             predicates:
               - Path=/second-service/management/**
