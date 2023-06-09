@@ -23,10 +23,10 @@ spring:
             - Path=/second-service/management/**
               name: management-second-service
           filters:
-            - name: user-filter-for-user-second-service
+            - name: user-second-service
               - RemoveRequestHeader=Cookie
               - AuthorizationHeaderFilter
-            - name: management-filter-for-management-second-service
+            - name: management-second-service
               - RemoveRequestHeader=Cookie
 
 
