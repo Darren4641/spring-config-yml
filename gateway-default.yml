@@ -27,6 +27,7 @@ spring:
             uri: lb://POST-SERVICE
             predicates:
               - Path=/second-service/management/**
+              - Method=GET,POST
             filters:
               - RemoveRequestHeader=Cookie
               #- RewritePath=/second-service/(?<segment>.*), /$\{segment}
