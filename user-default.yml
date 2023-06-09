@@ -41,3 +41,7 @@ management:
 
 
 secret: user-service-default1
+
+post:
+  url-prefix: http://127.0.0.1:8080/second-service
+  get-posts-path: /%s/posts
