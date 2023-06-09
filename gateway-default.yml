@@ -27,7 +27,7 @@ spring:
               - RemoveRequestHeader=Cookie
               - AuthorizationHeaderFilter
             - name: management-filter-for-management-second-service
-              - - RemoveRequestHeader=Cookie
+              - RemoveRequestHeader=Cookie
 
 
 
