@@ -27,6 +27,14 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             #- RewritePath=/first-service/(?<segment>.*), /$\{segment}
+        - id: first-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/first-service/user/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - AuthorizationHeaderFilter
+            #- RewritePath=/first-service/(?<segment>.*), /$\{segment}
         - id: second-service
           uri: lb://POST-SERVICE
           predicates:
