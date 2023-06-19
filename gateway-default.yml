@@ -26,7 +26,6 @@ spring:
             - Path=/first-service/info/**
           filters:
             - RemoveRequestHeader=Cookie
-            - AuthorizationHeaderFilter
             #- RewritePath=/first-service/(?<segment>.*), /$\{segment}
         - id: first-service
           uri: lb://USER-SERVICE
