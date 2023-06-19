@@ -23,7 +23,7 @@ spring:
         - id: first-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/first-service/user/**
+            - Path=/first-service/**
           filters:
             - RemoveRequestHeader=Cookie
             #- RewritePath=/first-service/(?<segment>.*), /$\{segment}
